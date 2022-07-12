@@ -33,7 +33,7 @@ nav.sticky {
     background-color: #7e29ce;
 }
 
-.logo a{
+.logo a {
     color: white;
     letter-spacing: 2px;
     font-size: 30px;
@@ -91,7 +91,7 @@ nav.sticky {
     cursor: pointer;
 }
 
-.burger div{
+.burger div {
     width: 25px;
     height: 3px;
     background-color: white;
@@ -99,43 +99,12 @@ nav.sticky {
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
-    .nav-links {
-        width: 55%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 90vh;
-        top: 10vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5 ease-in;
-        background: #7e29ce;
-        color: white;
-    }
-    .nav-links li {
-        opacity: 0;
-    }
-    .burger {
-        display: block;
-    }
-}
-
 @keyframes navLinkFade {
     from {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0px)
@@ -147,13 +116,15 @@ nav.sticky {
 }
 
 .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px,6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .toggle .line2 {
     opacity: 0;
 }
+
 .toggle .line3 {
-    transform: rotate(45deg) translate(-5px,-6px);
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* End of Navbar */
@@ -200,11 +171,11 @@ nav.sticky {
 }
 
 .MNS-h1:hover {
-    color: blueviolet;
     mix-blend-mode: difference;
 }
 
 .MNS a:hover {
+    color: red;
     mix-blend-mode: difference;
 }
 
@@ -241,4 +212,85 @@ nav.sticky {
     transform: scale(3);
     border: white;
     background-color: pink;
+}
+
+.custom-shape-divider-bottom-1657633967 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1657633967 svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 123px;
+    z-index: -2;
+}
+
+.custom-shape-divider-bottom-1657633967 .shape-fill {
+    fill: #CD6DE9;
+}
+
+.eterium {
+    top: 5%;
+    width: 35%;
+    height: 75%;
+    background-image: url(/src/Ethereum.png);
+    background-size: cover;
+    position: relative;
+    margin-left: 13%;
+    z-index: -1;
+    transform: rotate(-15deg)
+}
+
+.space {
+    position: relative;
+    height: 70vh;
+    background-color: #cd6de9;
+}
+
+@media screen and (max-width: 1300px) {
+    .eterium {
+        width: 50%;
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 90vh;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+        background: #7e29ce;
+        color: white;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
 }
