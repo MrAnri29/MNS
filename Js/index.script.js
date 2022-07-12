@@ -3,6 +3,27 @@ window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", window.scrollY > 0);
 })
 
+const MNS = document.querySelector('.MNS');
+
+let mouseCursor = document.querySelector('.cursor')
+
+MNS.addEventListener("mousemove", cursor);
+
+function cursor(e) {
+    mouseCursor.style.top = e.pageY + "px";
+    mouseCursor.style.left = e.pageX + "px";
+}
+
+MNS.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("MNS-grow");
+    mouseCursor.style.top = e.pageY + "px";
+    mouseCursor.style.left = e.pageX + "px";
+});
+MNS.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("MNS-grow");
+    mouseCursor.style.top = e.pageY + "px";
+    mouseCursor.style.left = e.pageX + "px";
+});
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');

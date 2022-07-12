@@ -21,7 +21,6 @@ nav {
     align-items: center;
     min-height: 10vh;
     font-family: "Nunito", sans-serif;
-    background-color: #7e29ce;
     position: fixed;
     top: 0;
     width: 100%;
@@ -31,6 +30,7 @@ nav {
 
 nav.sticky {
     padding: 20px 5px;
+    background-color: #7e29ce;
 }
 
 .logo a{
@@ -158,8 +158,87 @@ nav.sticky {
 
 /* End of Navbar */
 
-.space {
-    position: relative;
-    height: 110vh;
+
+/* <div class="start">
+        <div class="start-text-container">
+            <h1 class="MNS">Money No Skill</h1>
+            <p class="MNS-description">მოგესალმებით <a href="https://discord.gg/x9DaGa6DuM" class="MNS-li">Money No Skill</a>
+            -ის ვებ-საიტზე! Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="start-box"></div>
+        <div class="eterium"></div>
+    </div> */
+
+
+.start {
     z-index: -1;
+    height: 100vh;
+    padding-left: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.start-text-container {
+    width: 35%;
+    height: 50%;
+    color: white;
+    font-family: "Poopins", sans-serif;
+}
+
+.MNS {
+    font-size: 65px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: none;
+}
+
+.MNS-h1:hover {
+    color: blueviolet;
+    mix-blend-mode: difference;
+}
+
+.MNS a:hover {
+    mix-blend-mode: difference;
+}
+
+.MNS-description {
+    margin-top: 10px;
+}
+
+.MNS-link {
+    text-decoration: none;
+    color: purple;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.MNS-link:hover {
+    color: pink;
+}
+
+
+.cursor {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background-color, border, transform;
+    transform-origin: 70% 70%;
+}
+
+.MNS-grow {
+    transform: scale(3);
+    border: white;
+    background-color: pink;
 }
