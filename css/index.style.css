@@ -26,11 +26,13 @@ nav {
     width: 100%;
     padding: 35px 20px;
     transition: 0.3s;
+    z-index: 1000000;
 }
 
 nav.sticky {
     padding: 20px 5px;
     background-color: #7e29ce;
+    z-index: 100000;
 }
 
 .logo a {
@@ -47,6 +49,7 @@ nav.sticky {
 }
 
 .nav-links {
+    z-index: 10;
     display: flex;
     justify-content: space-around;
     width: 30%;
@@ -54,10 +57,12 @@ nav.sticky {
 }
 
 .nav-links li {
+    z-index: 10;
     list-style: none;
 }
 
 .nav-links a {
+    z-index: 10;
     position: relative;
     color: white;
     text-decoration: none;
@@ -76,6 +81,7 @@ nav.sticky {
     left: 0;
     bottom: -10px;
     transition: 0.3s;
+    z-index: 10;
 }
 
 .nav-links li a:hover:after {
@@ -99,19 +105,8 @@ nav.sticky {
     transition: all 0.3s ease;
 }
 
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px)
-    }
-}
-
 .nav-active {
+    z-index: 10;
     transform: translateX(0%);
 }
 
@@ -129,33 +124,16 @@ nav.sticky {
 
 /* End of Navbar */
 
-
-/* <div class="start">
-        <div class="start-text-container">
-            <h1 class="MNS">Money No Skill</h1>
-            <p class="MNS-description">მოგესალმებით <a href="https://discord.gg/x9DaGa6DuM" class="MNS-li">Money No Skill</a>
-            -ის ვებ-საიტზე! Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. 
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="start-box"></div>
-        <div class="eterium"></div>
-    </div> */
-
-
 .start {
     z-index: -1;
     height: 100vh;
-    padding-left: 15%;
+    margin-left: 15%;
     display: flex;
     align-items: center;
 }
 
 .start-text-container {
+    z-index: 3;
     width: 35%;
     height: 50%;
     color: white;
@@ -236,28 +214,19 @@ nav.sticky {
 }
 
 .eterium {
-    top: 5%;
-    width: 35%;
-    height: 75%;
-    background-image: url(/src/Ethereum.png);
-    background-size: cover;
-    position: relative;
-    margin-left: 13%;
-    z-index: -1;
-    transform: rotate(-15deg)
+    top: 20%;
+    right: 20%;
+    height: 60%;
+    position: absolute;
+    z-index: -5;
+    transform: rotate(-15deg);
 }
 
 .space {
     position: relative;
     height: 70vh;
     background-color: #cd6de9;
-}
-
-@media screen and (max-width: 1300px) {
-    .eterium {
-        width: 50%;
-        transform: scale(0.9);
-    }
+    z-index: -5;
 }
 
 @media screen and (max-width: 1024px) {
@@ -266,12 +235,27 @@ nav.sticky {
     }
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+@media screen and (max-width: 825px) {
+    .start-text-container {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    .MNS {
+        display: flex;
+        font-size: 70px;
+    }
+    .MNS-description {
+        margin-top: 30px;
+        font-size: 20px;
+        text-align: justify;
+    }
+}
 
+@media screen and (max-width: 768px) {
     .nav-links {
+        z-index: 10000;
         position: absolute;
         right: 0;
         height: 90vh;
@@ -287,10 +271,56 @@ nav.sticky {
     }
 
     .nav-links li {
+        z-index: 11;
         opacity: 0;
     }
 
     .burger {
         display: block;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .eterium {
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .eterium {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .MNS {
+        font-size: 50px;
+    }
+    .eterium {
+        right: 0;
+        left: 0;
+        position: absolute;
+        transform: scale(1.5)rotate(-15deg);
+    }
+}
+
+@media screen and (max-width: 220px) {
+    .MNS {
+        font-size: 30px;
+    }
+    .MNS-description {
+        font-size: 15px;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px)
     }
 }
