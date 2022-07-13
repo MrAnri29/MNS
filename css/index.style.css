@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 Body {
     background-color: blueviolet;
 }
@@ -31,6 +35,7 @@ nav {
 nav.sticky {
     padding: 20px 5px;
     background-color: #7e29ce;
+    z-index: 5;
 }
 
 .logo a {
@@ -99,6 +104,14 @@ nav.sticky {
     width: 25px;
     height: 3px;
     background-color: white;
+    margin: 5px 50px;
+    transition: all 0.3s ease;
+}
+
+.burger-sticky {
+    width: 25px;
+    height: 3px;
+    background-color: white;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -109,14 +122,17 @@ nav.sticky {
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
+    z-index: 15;
 }
 
 .toggle .line2 {
     opacity: 0;
+    z-index: 15;
 }
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+    z-index: 15;
 }
 
 /* End of Navbar */
@@ -216,16 +232,220 @@ nav.sticky {
     transform: rotate(-15deg);
 }
 
+.custom-shape-divider-top-1657706686 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1657706686 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 249px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1657706686 .shape-fill {
+    fill: #CD6DE9;
+}
+
+/* Page 2 */
+
+.VIP {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: #cd6de9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-template {
+    position: relative;
+    width: 270px;
+    height: 370px;
+}
+
+/* Gold */
+
+.gold-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+}
+
+.gold-card:hover {
+    transform: rotateY(-180deg);
+}
+
+.gold-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: url(/src/gold-background.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gold-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background: url(/src/gold-background.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Premium */
+
+.premium-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+}
+
+.premium-card:hover {
+    transform: rotateY(-180deg);
+}
+
+.premium-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: url(/src/premium-background.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.premium-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: url(/src/premium-background.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotateY(180deg)
+}
+
+/* VIP */
+
+.vip-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+}
+
+.vip-card:hover {
+    transform: rotateY(-180deg);
+}
+
+.vip-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: url(/src/vip-background.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.vip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: url(/src/vip-background.jpg);
+    background-size: cover;
+    color: white;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Page 3 */
+
 .space {
     position: relative;
-    height: 70vh;
-    background-color: #cd6de9;
-    z-index: -5;
+    height: 80vh;
+    background-color: blueviolet;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
 }
+
+
+
 
 @media screen and (max-width: 1024px) {
     .nav-links {
         width: 55%;
+    }
+    .card-template {
+        position: relative;
+        width: 230px;
+        height: 330px;
+    }
+    
+    .gold-card {
+        font-size: 13px;
+    }
+
+    .premium-card {
+        font-size: 13px;
+    }
+    
+    .vip-card {
+        font-size: 13px;
     }
 }
 
@@ -260,6 +480,22 @@ nav.sticky {
     }
 
     .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+        background: #7e29ceaf;
+        color: white;
+        z-index: -1;
+    }
+
+    .nav-sticky {
         z-index: 10000;
         position: absolute;
         right: 0;
@@ -283,6 +519,24 @@ nav.sticky {
     .burger {
         display: block;
     }
+
+    .card-template {
+        position: relative;
+        width: 200px;
+        height: 300px;
+    }
+
+    .gold-card {
+        font-size: 13px;
+    }
+
+    .premium-card {
+        font-size: 13px;
+    }
+    
+    .vip-card {
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 632px) {
@@ -296,6 +550,27 @@ nav.sticky {
         transform: rotate(180deg);
     }
     .MNS-description {
+        font-size: 18px;
+    }
+    .VIP {
+        height: 1300px;
+        flex-direction: column;
+    }
+    .card-template {
+        position: relative;
+        width: 250px;
+        height: 350px;
+    }
+
+    .gold-card {
+        font-size: 18px;
+    }
+
+    .premium-card {
+        font-size: 18px;
+    }
+    
+    .vip-card {
         font-size: 18px;
     }
 }
