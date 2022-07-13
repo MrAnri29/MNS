@@ -26,13 +26,11 @@ nav {
     width: 100%;
     padding: 35px 20px;
     transition: 0.3s;
-    z-index: 1000000;
 }
 
 nav.sticky {
     padding: 20px 5px;
     background-color: #7e29ce;
-    z-index: 100000;
 }
 
 .logo a {
@@ -52,7 +50,7 @@ nav.sticky {
     z-index: 10;
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 40%;
     transition: all 0.3s ease;
 }
 
@@ -105,8 +103,7 @@ nav.sticky {
     transition: all 0.3s ease;
 }
 
-.nav-active {
-    z-index: 10;
+.nav-links.nav-active {
     transform: translateX(0%);
 }
 
@@ -133,7 +130,6 @@ nav.sticky {
 }
 
 .start-text-container {
-    z-index: 3;
     width: 35%;
     height: 50%;
     color: white;
@@ -146,10 +142,6 @@ nav.sticky {
     color: white;
     transition: all 0.3s ease;
     cursor: none;
-}
-
-.MNS-h1:hover {
-    mix-blend-mode: difference;
 }
 
 .MNS a:hover {
@@ -169,7 +161,7 @@ nav.sticky {
 }
 
 .MNS-link:hover {
-    color: pink;
+    color: #cd6de9;
 }
 
 
@@ -192,24 +184,26 @@ nav.sticky {
     background-color: pink;
 }
 
-.custom-shape-divider-bottom-1657633967 {
+.custom-shape-divider-bottom-1657704292 {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-}
-
-.custom-shape-divider-bottom-1657633967 svg {
-    position: relative;
-    display: block;
-    width: calc(132% + 1.3px);
-    height: 123px;
+    transform: rotate(180deg);
     z-index: -2;
 }
 
-.custom-shape-divider-bottom-1657633967 .shape-fill {
+.custom-shape-divider-bottom-1657704292 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 200px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1657704292 .shape-fill {
     fill: #CD6DE9;
 }
 
@@ -218,7 +212,7 @@ nav.sticky {
     right: 20%;
     height: 60%;
     position: absolute;
-    z-index: -5;
+    z-index: -3;
     transform: rotate(-15deg);
 }
 
@@ -254,6 +248,17 @@ nav.sticky {
 }
 
 @media screen and (max-width: 768px) {
+    .custom-shape-divider-bottom-1657704292 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        z-index: -1;
+    }
+
     .nav-links {
         z-index: 10000;
         position: absolute;
@@ -266,7 +271,7 @@ nav.sticky {
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5 ease-in;
-        background: #7e29ce;
+        background: #7e29ceaf;
         color: white;
     }
 
@@ -280,15 +285,57 @@ nav.sticky {
     }
 }
 
+@media screen and (max-width: 632px) {
+    .custom-shape-divider-bottom-1657704292 {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    .MNS-description {
+        font-size: 18px;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .eterium {
         right: 15%;
     }
 }
 
+@media screen and (max-width: 372px) {
+    .MNS-description {
+        margin-top: 0;
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 365px) {
     .eterium {
         right: 10%;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    .MNS {
+        font-size: 45px;
+    }
+    .MNS-description {
+        margin-top: 30px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .MNS {
+        font-size: 20px;
+    }
+    .MNS-description {
+        margin-top: 10px;
+        font-size: 13px;
     }
 }
 
