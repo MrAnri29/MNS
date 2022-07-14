@@ -510,11 +510,15 @@ nav.sticky {
         z-index: -1;
     }
 
+    nav {
+        background-color: #7e29ce;
+    }
+
     .nav-links {
         position: absolute;
         right: 0;
-        height: 100vh;
-        top: 0;
+        height: 90vh;
+        top: 10vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -523,7 +527,7 @@ nav.sticky {
         transition: transform 0.5 ease-in;
         background: #7e29ceaf;
         color: white;
-        z-index: -1;
+        z-index: 10000;
     }
 
     .nav-sticky {
@@ -607,12 +611,20 @@ nav.sticky {
 }
 
 @media screen and (max-width: 450px) {
+    .logo a {
+        font-size: 23px;
+    }
+
     .eterium {
         right: 15%;
     }
 }
 
 @media screen and (max-width: 372px) {
+    .logo a {
+        font-size: 20px;
+    }
+
     .MNS-description {
         margin-top: 0;
         font-size: 15px;
@@ -620,6 +632,10 @@ nav.sticky {
 }
 
 @media screen and (max-width: 365px) {
+    .logo a {
+        font-size: 15px;
+    }
+
     .eterium {
         right: 10%;
     }
