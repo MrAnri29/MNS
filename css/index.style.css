@@ -273,6 +273,10 @@ nav.sticky {
 
 /* Gold */
 
+.card-active {
+    transform: rotateY(-180deg);
+}
+
 .gold-card {
     position: absolute;
     width: 100%;
@@ -281,10 +285,6 @@ nav.sticky {
     transition: all 0.5s ease;
     font-family: "Nunito", sans-serif;
     text-align: center;
-}
-
-.gold-card:hover {
-    transform: rotateY(-180deg);
 }
 
 .gold-front {
@@ -330,10 +330,6 @@ nav.sticky {
     text-align: center;
 }
 
-.premium-card:hover {
-    transform: rotateY(-180deg);
-}
-
 .premium-front {
     position: absolute;
     width: 100%;
@@ -376,10 +372,6 @@ nav.sticky {
     transition: all 0.5s ease;
     font-family: "Nunito", sans-serif;
     text-align: center;
-}
-
-.vip-card:hover {
-    transform: rotateY(-180deg);
 }
 
 .vip-front {
