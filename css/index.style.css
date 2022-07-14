@@ -277,15 +277,15 @@ nav.sticky {
 
 .info {
     position: absolute;
-    top: 4%;
-    right: 7%;
+    top: 5%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .info-icon {
+    margin-top: 5%;
     position: relative;
     transform: scale(1.5);
 }
@@ -294,20 +294,24 @@ nav.sticky {
     opacity: 1;
 }
 
-.info-icon:hover .price {
-    visibility: hidden;
+.info:hover ~ .price {
+    opacity: 0;
 }
 
 .info-text {
     position: relative;
     font-size: 15px;
-    margin-left: 15px;
+    margin-top: 15%;
     padding: 10px 10px;
     background-color: white;
     color: black;
     border-radius: 30px;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.price,.description,.nft {
+    transition: all 0.1s ease;
 }
 
 /* Gold */
@@ -619,6 +623,28 @@ nav.sticky {
     .eterium {
         right: 10%;
     }
+
+    .VIP {
+        height: 1200px;
+        flex-direction: column;
+    }
+    .card-template {
+        position: relative;
+        width: 200px;
+        height: 300px;
+    }
+
+    .gold-card {
+        font-size: 13px;
+    }
+
+    .premium-card {
+        font-size: 13px;
+    }
+    
+    .vip-card {
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 315px) {
@@ -631,6 +657,19 @@ nav.sticky {
     }
 }
 
+@media screen and (max-width: 300px) {
+    .MNS {
+        font-size: 50px;
+    }
+
+    .eterium {
+        right: 0;
+        left: 0;
+        position: absolute;
+        transform: scale(1.5)rotate(-15deg);
+    }
+}
+
 @media screen and (max-width: 270px) {
     .MNS {
         font-size: 20px;
@@ -639,17 +678,27 @@ nav.sticky {
         margin-top: 10px;
         font-size: 13px;
     }
-}
 
-@media screen and (max-width: 300px) {
-    .MNS {
-        font-size: 50px;
+    .VIP {
+        height: 1200px;
+        flex-direction: column;
     }
-    .eterium {
-        right: 0;
-        left: 0;
-        position: absolute;
-        transform: scale(1.5)rotate(-15deg);
+    .card-template {
+        position: relative;
+        width: 150px;
+        height: 250px;
+    }
+
+    .gold-card {
+        font-size: 13px;
+    }
+
+    .premium-card {
+        font-size: 13px;
+    }
+    
+    .vip-card {
+        font-size: 13px;
     }
 }
 

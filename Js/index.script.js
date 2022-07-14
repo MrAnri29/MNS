@@ -70,7 +70,7 @@ const cards = [
 
 cards.forEach(x => {
     x.addEventListener('click', () => {
-        if (x.classList.contains('.card-active')){
+        if (x.classList.contains('.card-active')) {
             x.classList.remove('card-active')
         } else {
             x.classList.toggle('card-active')
