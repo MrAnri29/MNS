@@ -14,7 +14,8 @@ html {
 }
 
 Body {
-    background-color: blueviolet;
+    background: linear-gradient(45deg, orange, #910185 95%);
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -34,7 +35,7 @@ nav {
 
 nav.sticky {
     padding: 20px 5px;
-    background-color: #7e29ce;
+    background: linear-gradient(45deg, orange, #910185 95%);
     z-index: 5;
 }
 
@@ -45,10 +46,13 @@ nav.sticky {
     transition: 0.5s;
     text-decoration: none;
     position: relative;
+    /* border-radius: 30px;
+    padding: 10px 10px; */
 }
 
 .logo a:hover {
     color: purple;
+    /* background: linear-gradient(45deg, orange, #910185 95%); */
 }
 
 .nav-links {
@@ -78,7 +82,7 @@ nav.sticky {
 .nav-links li a:after {
     content: "";
     position: absolute;
-    background-color: purple;
+    background: linear-gradient(45deg, orange, #910185 110%);
     height: 3px;
     width: 0;
     left: 0;
@@ -92,7 +96,7 @@ nav.sticky {
 }
 
 .nav-links a:hover {
-    color: #910191;
+    color: orange;
 }
 
 .burger {
@@ -136,6 +140,39 @@ nav.sticky {
 }
 
 /* End of Navbar */
+
+.circle1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(30deg, #ffa600d7, #800080de 80%);
+    top: 30%;
+    left: -10%;
+    z-index: -1000;
+}
+
+.circle2 {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(-135deg, orange, purple 80%);
+    top: 40%;
+    left: 90%;
+    z-index: -1000;
+}
+
+.circle3{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, orange, purple 80%);
+    top: -50%;
+    left: 35%;
+    z-index: -1000;
+}
 
 .start {
     z-index: -1;
@@ -220,7 +257,7 @@ nav.sticky {
 }
 
 .custom-shape-divider-bottom-1657704292 .shape-fill {
-    fill: #CD6DE9;
+    fill: #c42cb7;
 }
 
 .eterium {
@@ -250,7 +287,7 @@ nav.sticky {
 }
 
 .custom-shape-divider-top-1657706686 .shape-fill {
-    fill: #CD6DE9;
+    fill: #c42cb7;
 }
 
 /* Page 2 */
@@ -259,7 +296,7 @@ nav.sticky {
     position: relative;
     width: 100%;
     height: 60vh;
-    background-color: #cd6de9;
+    background-color: #c42cb7;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -448,7 +485,7 @@ nav.sticky {
 .space {
     position: relative;
     height: 80vh;
-    background-color: blueviolet;
+    background: linear-gradient(45deg, orange, #910185 95%);
     z-index: -1;
     display: flex;
     justify-content: center;
@@ -511,21 +548,21 @@ nav.sticky {
     }
 
     nav {
-        background-color: #7e29ce;
+        background: linear-gradient(45deg, orange, #910185 95%);
     }
 
     .nav-links {
         position: absolute;
         right: 0;
-        height: 90vh;
-        top: 10vh;
+        height: 84.2vh;
+        top: 16.8vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5 ease-in;
-        background: #7e29ceaf;
+        background: linear-gradient(45deg, orange, #910185 95%);
         color: white;
         z-index: 10000;
     }
@@ -534,15 +571,15 @@ nav.sticky {
         z-index: 10000;
         position: absolute;
         right: 0;
-        height: 90vh;
-        top: 10vh;
+        height: 89.8vh;
+        top: 12.2vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5 ease-in;
-        background: #7e29ceaf;
+        background: linear-gradient(45deg, orange, #910185 95%);
         color: white;
     }
 
@@ -617,6 +654,16 @@ nav.sticky {
 
     .eterium {
         right: 15%;
+    }
+
+    .nav-links {
+        height: 85.7vh;
+        top: 15.3vh;
+    }
+
+    .nav-sticky {
+        height: 89.3vh;
+        top: 10.7vh;
     }
 }
 
