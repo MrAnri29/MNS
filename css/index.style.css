@@ -290,6 +290,8 @@ nav.sticky {
     fill: #c42cb7;
 }
 
+/* End of Page 1 */
+
 /* Page 2 */
 
 .VIP {
@@ -483,11 +485,13 @@ nav.sticky {
     flex-direction: column;
 }
 
+/* End of VIP */
+
 /* Page 3 */
 
 .team {
     position: relative;
-    min-height: 100vh;
+    min-height: 120vh;
     background: linear-gradient(45deg, #ffa500, #910185 95%);
     z-index: 1;
     display: flex;
@@ -498,14 +502,27 @@ nav.sticky {
 /* Cards */
 
 .slide-container {
-    width: 1120px;
     width: 100%;
     padding: 40px 0;
+    top: 100px;
 }
 
 .slide-content {
     margin: 0 40px;
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-wrapper {
+    position: relative;
+    width: 110%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+    z-index: -1;
+    top: 70px;
 }
 
 .card {
@@ -513,14 +530,6 @@ nav.sticky {
     border-radius: 25px;
     background-color: #FFF;
     margin: 15px;
-}
-
-.card-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: "Nunito", sans-serif;
 }
 
 .image-content,
@@ -546,14 +555,6 @@ nav.sticky {
     background-color: orange;
     border-radius: 25px 25px 25px 25px;
     transition: all 0.3s ease;
-}
-
-.overlay:hover {
-    background: linear-gradient(45deg, orange, #910185 95%);
-}
-
-.card-image .card-img:hover {
-    background: linear-gradient(45deg, orange, #910185 95%);
 }
 
 .card-image {
@@ -583,6 +584,7 @@ nav.sticky {
     font-size: 14px;
     color: #707070;
     text-align: center;
+    top: 5px;
 }
 
 .card-button {
@@ -594,15 +596,17 @@ nav.sticky {
     border-radius: 6px;
     margin: 14px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .card-button:hover {
-    background: linear-gradient(45deg, orange, #910185 95%);
+    background-color: purple;
 }
 
-
 /* End of Cards */
+
+/* End of page 3 */
+
 @media screen and (max-width: 1024px) {
     .nav-links {
         width: 55%;
@@ -721,6 +725,15 @@ nav.sticky {
     .vip-card {
         font-size: 13px;
     }
+
+    .card-image {
+        position: relative;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        background: #FFF;
+        padding: 3px;
+    }
 }
 
 @media screen and (max-width: 632px) {
@@ -763,15 +776,27 @@ nav.sticky {
 
     .card-wrapper {
         flex-direction: column;
-        /* top: 200; */
+    }
+
+    .slide-container {
+        top: 0;
     }
 
     .team {
-        height: 200vh;
+        height: 250vh;
     }
 
     .card {
-        width: 50%;
+        width: 250px;
+    }
+
+    .card-image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: #FFF;
+        padding: 3px;
     }
 }
 
@@ -793,6 +818,16 @@ nav.sticky {
         height: 89.3vh;
         top: 10.7vh;
     }
+
+    .custom-shape-divider-top-1657706686 svg {
+        width: calc(110% + 1.3px);
+        height: 150px;
+    }
+
+    .custom-shape-divider-bottom-1657704292 svg {
+        width: calc(130% + 1.3px);
+        height: 150px;
+    }
 }
 
 @media screen and (max-width: 372px) {
@@ -812,7 +847,7 @@ nav.sticky {
     }
 
     .eterium {
-        right: 10%;
+        display: none;
     }
 
     .VIP {
@@ -837,6 +872,20 @@ nav.sticky {
     .vip-card {
         font-size: 13px;
     }
+    
+    .card {
+        width: 200px;
+    }
+
+    .custom-shape-divider-top-1657706686 svg {
+        width: calc(100% + 1.3px);
+        height: 100px;
+    }
+
+    .custom-shape-divider-bottom-1657704292 svg {
+        width: calc(110% + 1.3px);
+        height: 100px;
+    }
 }
 
 @media screen and (max-width: 315px) {
@@ -856,10 +905,7 @@ nav.sticky {
     }
 
     .eterium {
-        right: 0;
-        left: 0;
-        position: absolute;
-        transform: scale(1.5)rotate(-15deg);
+        display: none;
     }
 }
 
@@ -893,6 +939,28 @@ nav.sticky {
     }
 
     .vip-card {
+        font-size: 13px;
+    }
+
+    .card {
+        width: 150px;
+        font-size: 13px;
+    }
+
+    .team {
+        height: 250vh;
+    }
+
+    .card-image {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: #FFF;
+        padding: 3px;
+    }
+
+    .card-button {
         font-size: 13px;
     }
 }
