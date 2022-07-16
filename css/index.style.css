@@ -163,7 +163,7 @@ nav.sticky {
     z-index: -1000;
 }
 
-.circle3{
+.circle3 {
     position: absolute;
     width: 600px;
     height: 600px;
@@ -198,7 +198,7 @@ nav.sticky {
 }
 
 .MNS a:hover {
-    color: red;
+    /* color: red; */
     mix-blend-mode: difference;
 }
 
@@ -327,11 +327,11 @@ nav.sticky {
     transform: scale(1.5);
 }
 
-.info-icon:hover + .info-text {
+.info-icon:hover+.info-text {
     opacity: 1;
 }
 
-.info:hover ~ .price {
+.info:hover~.price {
     opacity: 0;
 }
 
@@ -347,7 +347,9 @@ nav.sticky {
     transition: all 0.3s ease;
 }
 
-.price,.description,.nft {
+.price,
+.description,
+.nft {
     transition: all 0.1s ease;
 }
 
@@ -480,30 +482,138 @@ nav.sticky {
     justify-content: center;
     flex-direction: column;
 }
+
 /* Page 3 */
 
-.space {
+.team {
     position: relative;
-    height: 80vh;
-    background: linear-gradient(45deg, orange, #910185 95%);
-    z-index: -1;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ffa500, #910185 95%);
+    z-index: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+/* Cards */
+
+.slide-container {
+    width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.slide-content {
+    margin: 0 40px;
+    border-radius: 25px;
+}
+
+.card {
+    width: 300px;
+    border-radius: 25px;
+    background-color: #FFF;
+    margin: 15px;
+}
+
+.card-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    border-radius: 25px 25px 25px 25px;
+    transition: all 0.3s ease;
+}
+
+.overlay:hover {
+    background: linear-gradient(45deg, orange, #910185 95%);
+}
+
+.card-image .card-img:hover {
+    background: linear-gradient(45deg, orange, #910185 95%);
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid orange;
+}
+
+.card-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+
+.card-button {
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: orange;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    background: linear-gradient(45deg, orange, #910185 95%);
 }
 
 
-
-
+/* End of Cards */
 @media screen and (max-width: 1024px) {
     .nav-links {
         width: 55%;
     }
+
     .card-template {
         position: relative;
         width: 230px;
         height: 330px;
     }
-    
+
     .gold-card {
         font-size: 13px;
     }
@@ -511,7 +621,7 @@ nav.sticky {
     .premium-card {
         font-size: 13px;
     }
-    
+
     .vip-card {
         font-size: 13px;
     }
@@ -524,10 +634,12 @@ nav.sticky {
         flex-direction: column;
         align-items: center;
     }
+
     .MNS {
         display: flex;
         font-size: 70px;
     }
+
     .MNS-description {
         margin-top: 30px;
         font-size: 20px;
@@ -605,7 +717,7 @@ nav.sticky {
     .premium-card {
         font-size: 13px;
     }
-    
+
     .vip-card {
         font-size: 13px;
     }
@@ -621,13 +733,16 @@ nav.sticky {
         line-height: 0;
         transform: rotate(180deg);
     }
+
     .MNS-description {
         font-size: 18px;
     }
+
     .VIP {
         height: 1300px;
         flex-direction: column;
     }
+
     .card-template {
         position: relative;
         width: 250px;
@@ -641,9 +756,22 @@ nav.sticky {
     .premium-card {
         font-size: 18px;
     }
-    
+
     .vip-card {
         font-size: 18px;
+    }
+
+    .card-wrapper {
+        flex-direction: column;
+        /* top: 200; */
+    }
+
+    .team {
+        height: 200vh;
+    }
+
+    .card {
+        width: 50%;
     }
 }
 
@@ -691,6 +819,7 @@ nav.sticky {
         height: 1200px;
         flex-direction: column;
     }
+
     .card-template {
         position: relative;
         width: 200px;
@@ -704,7 +833,7 @@ nav.sticky {
     .premium-card {
         font-size: 13px;
     }
-    
+
     .vip-card {
         font-size: 13px;
     }
@@ -714,6 +843,7 @@ nav.sticky {
     .MNS {
         font-size: 45px;
     }
+
     .MNS-description {
         margin-top: 30px;
         font-size: 15px;
@@ -737,6 +867,7 @@ nav.sticky {
     .MNS {
         font-size: 20px;
     }
+
     .MNS-description {
         margin-top: 10px;
         font-size: 13px;
@@ -746,6 +877,7 @@ nav.sticky {
         height: 1200px;
         flex-direction: column;
     }
+
     .card-template {
         position: relative;
         width: 150px;
@@ -759,7 +891,7 @@ nav.sticky {
     .premium-card {
         font-size: 13px;
     }
-    
+
     .vip-card {
         font-size: 13px;
     }
@@ -769,6 +901,7 @@ nav.sticky {
     .MNS {
         font-size: 30px;
     }
+
     .MNS-description {
         font-size: 15px;
     }
