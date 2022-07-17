@@ -36,6 +36,34 @@ body {
 
 .loader {
     position: relative;
+    transform: scale(0.5);
+}
+
+/* SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10em;
+    background: #80004f;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: orange;
+    cursor: none;
+    width: 80%;
+    transition: all 0.3s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: purple;
 }
 
 /* Navbar */
