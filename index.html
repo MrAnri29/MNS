@@ -30,24 +30,27 @@
 
     <!-- Navbar -->
     <nav>
-        <div class="logo">
+        <div class="logo" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800" >
             <h4><a href="https://discord.gg/x9DaGa6DuM">Money No Skill</a></h4>
         </div>
         <ul class="nav-links">
-            <li>
-                <a href="#">Home</a>
+            <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
+                <a href="#" class="nav-link">Home</a>
             </li>
-            <li>
-                <a href="#VIP-href">VIP</a>
+            <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
+                <a href="#VIP-href" class="nav-link">VIP</a>
             </li>
-            <li>
-                <a href="#team">Team</a>
+            <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
+                <a href="#team" class="nav-link">Team</a>
             </li>
-            <li>
-                <a href="#">webinars</a>
+            <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
+                <a href="#" class="nav-link">webinars</a>
             </li>
-            <li>
-                <a href="#">server</a>
+            <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
+                <a href="#" class="nav-link">server</a>
+            </li>
+            <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
+                <a href="https://discord.gg/x9DaGa6DuM" class="discord">Discord</a>
             </li>
         </ul>
         <div class="burger">
@@ -58,12 +61,12 @@
     </nav>
 
     <!-- Page 1 -->
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-    <div class="circle3"></div>
+    <div class="circle1" data-aos="fade-right" data-aos-duration="800"></div>
+    <div class="circle2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200"></div>
+    <div class="circle3" data-aos="fade-down" data-aos-duration="800" data-aos-delay="300"></div>
     <div class="cursor"></div>
     <div class="start">
-        <div class="start-text-container" data-aos="fade-right" data-aos-duration="800">
+        <div class="start-text-container" data-aos="fade-right" data-aos-duration="800" data-aos-delay="600">
             <h1 class="MNS"><a href="https://discord.gg/x9DaGa6DuM" class="MNS">Money No Skill</a></h1>
             <p class="MNS-description">მოგესალმებით <a href="https://discord.gg/x9DaGa6DuM" class="MNS-link">Money No
                     Skill</a>
@@ -73,7 +76,8 @@
                 It has survived not only five centuries, but also the leap into electronic typesetting,
                 remaining essentially unchanged.</p>
         </div>
-        <img src="/src/Ethereum.png" class="eterium" data-aos="fade-left" data-aos-duration="800"></img>
+        <img src="/src/Ethereum.png" class="eterium" data-aos="fade-left" data-aos-duration="800"
+            data-aos-delay="400"></img>
         <div class="custom-shape-divider-bottom-1657704292" id="VIP-href">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                 preserveAspectRatio="none">
@@ -108,7 +112,8 @@
                     </div>
                     <h1 class="price">49.99$</h1>
                     <p class="description"><br> 3 - 4 Signals per day <br><br> Weekly webinars <br><br> Weekly analysis
-                        <br><br> Chart updates </p>
+                        <br><br> Chart updates
+                    </p>
                 </div>
             </div>
         </div>
@@ -178,7 +183,7 @@
             <div class="slide-content">
                 <div class="card-wrapper">
 
-                    <div class="card" data-aos="flip-left" data-aos-duration="1000" >
+                    <div class="card" data-aos="flip-left" data-aos-duration="1000">
                         <div class="image-content">
                             <span class="overlay"></span>
                             <div class="card-image">
@@ -187,7 +192,8 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-name">Enigma#5369</h2>
-                            <p class="card-description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="card-description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
                             <button class="card-button">View More</button>
                         </div>
                     </div>
@@ -200,7 +206,8 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-name">Vajex#0069</h2>
-                            <p class="card-description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="card-description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
                             <button class="card-button">View More</button>
                         </div>
                     </div>
@@ -214,7 +221,8 @@
                         </div>
                         <div class="card-content">
                             <h2 class="card-name">KOKOB#9983</h2>
-                            <p class="card-description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="card-description">The lorem text the section that contains header with having open
+                                functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
                             <button class="card-button">View More</button>
                         </div>
                     </div>
@@ -226,9 +234,9 @@
     </section>
 
     <!-- Page 4 -->
-    <section class="server" id="server">
+    <!-- <section class="server" id="server">
 
-    </section>
+    </section> -->
 
 
 
@@ -237,7 +245,11 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: true,
+        });
     </script>
 
 </body>
