@@ -28,9 +28,14 @@
 
 <body>
 
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <img src="/src/loader.gif" class="loader">
+    </div>
+
     <!-- Navbar -->
     <nav>
-        <div class="logo" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800" >
+        <div class="logo" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
             <h4><a href="https://discord.gg/x9DaGa6DuM">Money No Skill</a></h4>
         </div>
         <ul class="nav-links">
@@ -96,7 +101,7 @@
 
     <!-- Page 2 -->
     <div class="VIP">
-        <div class="card-template gold" data-aos="fade-right" data-aos-duration="800">
+        <div class="card-template gold" data-aos="fade-right" data-aos-duration="800" data-aos-mirror="true">
             <div class="gold-card">
                 <div class="gold-front">
                     <div class="info">
@@ -117,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-template premium" data-aos="fade-up" data-aos-duration="800">
+        <div class="card-template premium" data-aos="fade-up" data-aos-duration="800" data-aos-mirror="true">
             <div class="premium-card">
                 <div class="premium-front">
                     <div class="info">
@@ -137,7 +142,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-template vip" data-aos="fade-left" data-aos-duration="800">
+        <div class="card-template vip" data-aos="fade-left" data-aos-duration="800" data-aos-mirror="true">
             <div class="vip-card">
                 <div class="vip-front">
                     <div class="info">
@@ -252,6 +257,14 @@
         });
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(window).on("load", function () {
+            $(".loader-wrapper").fadeOut(300);
+            $('body').css('overflow-y', 'visible');
+        });
+    </script>
 </body>
 
 </html>
