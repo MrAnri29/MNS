@@ -261,12 +261,12 @@ nav.sticky {
     font-size: 65px;
     text-decoration: none;
     color: white;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
     cursor: none;
 }
 
-.MNS a:hover {
-    /* color: red; */
+.MNS:hover > a {
+    color: blue;
     mix-blend-mode: difference;
 }
 
