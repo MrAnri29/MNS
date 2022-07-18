@@ -58,7 +58,7 @@
                 <a href="https://discord.gg/x9DaGa6DuM" class="discord">Discord</a>
             </li>
         </ul>
-        <div class="burger">
+        <div class="burger" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
@@ -100,8 +100,11 @@
     </div>
 
     <!-- Page 2 -->
+    <div class="VIP-text-bg">
+        <h1 class="VIP-text" data-aos="zoom-in" data-aos-duration="600" data-aos-mirror="true">Our services</h1>
+    </div>
     <div class="VIP">
-        <div class="card-template gold" data-aos="fade-right" data-aos-duration="800" data-aos-mirror="true">
+        <div class="card-template gold" data-aos="zoom-in" data-aos-duration="600" data-aos-mirror="true">
             <div class="gold-card">
                 <div class="gold-front">
                     <div class="info">
@@ -122,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-template premium" data-aos="fade-up" data-aos-duration="800" data-aos-mirror="true">
+        <div class="card-template premium" data-aos="zoom-in" data-aos-duration="600" data-aos-mirror="true">
             <div class="premium-card">
                 <div class="premium-front">
                     <div class="info">
@@ -142,7 +145,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-template vip" data-aos="fade-left" data-aos-duration="800" data-aos-mirror="true">
+        <div class="card-template vip" data-aos="zoom-in" data-aos-duration="600" data-aos-mirror="true">
             <div class="vip-card">
                 <div class="vip-front">
                     <div class="info">
@@ -188,7 +191,8 @@
             <div class="slide-content">
                 <div class="card-wrapper">
 
-                    <div class="card" data-aos="flip-left" data-aos-duration="1000">
+                    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="1000">
                         <div class="image-content">
                             <span class="overlay"></span>
                             <div class="card-image">
@@ -202,7 +206,8 @@
                             <button class="card-button">View More</button>
                         </div>
                     </div>
-                    <div class="card" data-aos="flip-up" data-aos-duration="1000">
+                    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="1000">
                         <div class="image-content">
                             <span class="overlay"></span>
                             <div class="card-image">
@@ -217,7 +222,8 @@
                         </div>
                     </div>
 
-                    <div class="card" data-aos="flip-right" data-aos-duration="1000">
+                    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="1000">
                         <div class="image-content">
                             <span class="overlay"></span>
                             <div class="card-image">
@@ -254,6 +260,10 @@
             easing: 'ease', // default easing for AOS animations
             once: false, // whether animation should happen only once - while scrolling down
             mirror: true,
+            disable: function () {
+                var maxWidth = 768;
+                return window.innerWidth < maxWidth;
+            }
         });
     </script>
 

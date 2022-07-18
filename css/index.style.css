@@ -362,6 +362,20 @@ nav.sticky {
 
 /* Page 2 */
 
+.VIP-text-bg {
+    padding: 20px 0 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c42cb7;
+}
+
+.VIP-text {
+    font-family: "Nunito", sans-serif;
+    color: white;
+}
+
 .VIP {
     position: relative;
     width: 100%;
@@ -573,6 +587,7 @@ nav.sticky {
     width: 100%;
     padding: 40px 0;
     top: 100px;
+    z-index: 1000;
 }
 
 .slide-content {
@@ -756,7 +771,7 @@ nav.sticky {
         position: absolute;
         right: 0;
         height: 84.2vh;
-        top: 16.8vh;
+        top: 19.3vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -773,7 +788,7 @@ nav.sticky {
         position: absolute;
         right: 0;
         height: 89.8vh;
-        top: 12.2vh;
+        top: 14vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -936,6 +951,18 @@ nav.sticky {
     }
 }
 
+@media screen and (max-width: 432px) {
+    .nav-links {
+        height: 84.2vh;
+        top: 17.6vh;
+    }
+
+    .nav-sticky {
+        height: 89.8vh;
+        top: 12vh;
+    }
+}
+
 @media screen and (max-width: 372px) {
     .logo a {
         font-size: 20px;
@@ -994,6 +1021,18 @@ nav.sticky {
     }
 }
 
+@media screen and (max-width: 355px) {
+    .nav-links {
+        height: 84.2vh;
+        top: 17.3vh;
+    }
+
+    .nav-sticky {
+        height: 89.8vh;
+        top: 12vh;
+    }
+}
+
 @media screen and (max-width: 315px) {
     .MNS {
         font-size: 45px;
@@ -1029,6 +1068,16 @@ nav.sticky {
 
     .eterium {
         display: none;
+    }
+
+    .nav-links {
+        height: 84.2vh;
+        top: 19.8vh;
+    }
+
+    .nav-sticky {
+        height: 89.8vh;
+        top: 12vh;
     }
 }
 
