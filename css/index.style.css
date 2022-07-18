@@ -311,7 +311,7 @@ nav.sticky {
 .MNS-grow {
     transform: scale(3);
     border: white;
-    background-color: pink;
+    background-color: #ffffffaa;
 }
 
 .custom-shape-divider-bottom-1657704292 {
@@ -669,33 +669,19 @@ nav.sticky {
 }
 
 .card-name {
+    position: relative;
+    top: 10px;
     font-size: 20px;
     font-weight: 500;
     color: #333;
 }
 
 .card-description {
+    position: relative;
+    top: 15px;
     font-size: 16px;
     color: #707070;
     text-align: center;
-    top: 0;
-}
-
-.card-button {
-    border: none;
-    font-size: 16px;
-    color: #FFF;
-    padding: 8px 16px;
-    background-color: orange;
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    z-index: 999;
-}
-
-.card-button:hover {
-    background-color: purple;
 }
 
 /* End of Cards */
