@@ -79,28 +79,38 @@ nav {
     width: 100%;
     padding: 35px 20px;
     transition: all 0.3s;
+    height: 18vh;
 }
 
 nav.sticky {
     padding: 20px 5px;
     background: linear-gradient(45deg, orange, #910185 95%);
     z-index: 5;
+    height: 13vh;
 }
 
 .logo a {
-    color: white;
     letter-spacing: 2px;
     font-size: 30px;
     transition: 0.5s;
     text-decoration: none;
-    position: relative;
-    /* border-radius: 30px;
-    padding: 10px 10px; */
+    color: white;
+    /* position: relative;
+    background: linear-gradient(90deg, white 50%, orange 50%, #c500b5 95%);
+    background-size: 150%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    transition: all 0.3s ease-out;
 }
 
 .logo a:hover {
-    color: purple;
-    /* background: linear-gradient(45deg, orange, #910185 95%); */
+    /* background: linear-gradient(90deg,orange 50%, #c500b5 95%);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: orange;
 }
 
 .nav-links {
@@ -271,7 +281,7 @@ nav.sticky {
 }
 
 .MNS-description {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .MNS-link {
@@ -284,7 +294,6 @@ nav.sticky {
 .MNS-link:hover {
     color: #cd6de9;
 }
-
 
 .cursor {
     position: absolute;
@@ -610,9 +619,11 @@ nav.sticky {
 
 .card {
     width: 300px;
+    min-height: 380px;
     border-radius: 25px;
     background-color: #FFF;
     margin: 15px;
+    z-index: 5;
 }
 
 .image-content,
@@ -658,16 +669,16 @@ nav.sticky {
 }
 
 .card-name {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     color: #333;
 }
 
 .card-description {
-    font-size: 14px;
+    font-size: 16px;
     color: #707070;
     text-align: center;
-    top: 5px;
+    top: 0;
 }
 
 .card-button {
@@ -680,6 +691,7 @@ nav.sticky {
     margin: 14px;
     cursor: pointer;
     transition: all 0.5s ease;
+    z-index: 999;
 }
 
 .card-button:hover {
@@ -691,6 +703,10 @@ nav.sticky {
 /* End of page 3 */
 
 @media screen and (max-width: 1024px) {
+    .custom-shape-divider-bottom-1657704292 {
+        bottom: -20vh;
+    }
+
     .nav-links {
         width: 65%;
     }
@@ -711,6 +727,10 @@ nav.sticky {
 
     .vip-card {
         font-size: 13px;
+    }
+
+    .start {
+        height: 120vh;
     }
 }
 
@@ -754,7 +774,7 @@ nav.sticky {
 @media screen and (max-width: 768px) {
     .custom-shape-divider-bottom-1657704292 {
         position: absolute;
-        bottom: 0;
+        bottom: -20vh;
         left: 0;
         width: 100%;
         overflow: hidden;
@@ -770,8 +790,8 @@ nav.sticky {
     .nav-links {
         position: absolute;
         right: 0;
-        height: 84.2vh;
-        top: 19.3vh;
+        height: calc(100vh - 18vh);
+        top: 18vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -787,8 +807,8 @@ nav.sticky {
         z-index: 10000;
         position: absolute;
         right: 0;
-        height: 89.8vh;
-        top: 14vh;
+        height: calc(100vh - 13vh);
+        top: 13vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -843,7 +863,7 @@ nav.sticky {
 @media screen and (max-width: 632px) {
     .custom-shape-divider-bottom-1657704292 {
         position: absolute;
-        bottom: -20px;
+        bottom: -20vh;
         left: 0;
         width: 100%;
         overflow: hidden;
@@ -930,16 +950,6 @@ nav.sticky {
         right: 15%;
     }
 
-    .nav-links {
-        height: 85.7vh;
-        top: 15.3vh;
-    }
-
-    .nav-sticky {
-        height: 89.3vh;
-        top: 10.7vh;
-    }
-
     .custom-shape-divider-top-1657706686 svg {
         width: calc(110% + 1.3px);
         height: 150px;
@@ -950,19 +960,6 @@ nav.sticky {
         height: 150px;
     }
 }
-
-@media screen and (max-width: 432px) {
-    .nav-links {
-        height: 84.2vh;
-        top: 17.6vh;
-    }
-
-    .nav-sticky {
-        height: 89.8vh;
-        top: 12vh;
-    }
-}
-
 @media screen and (max-width: 372px) {
     .logo a {
         font-size: 20px;
@@ -1021,18 +1018,6 @@ nav.sticky {
     }
 }
 
-@media screen and (max-width: 355px) {
-    .nav-links {
-        height: 84.2vh;
-        top: 17.3vh;
-    }
-
-    .nav-sticky {
-        height: 89.8vh;
-        top: 12vh;
-    }
-}
-
 @media screen and (max-width: 315px) {
     .MNS {
         font-size: 45px;
@@ -1068,16 +1053,6 @@ nav.sticky {
 
     .eterium {
         display: none;
-    }
-
-    .nav-links {
-        height: 84.2vh;
-        top: 19.8vh;
-    }
-
-    .nav-sticky {
-        height: 89.8vh;
-        top: 12vh;
     }
 }
 
